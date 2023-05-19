@@ -26,7 +26,7 @@ function App() {
   }, [region]);
 
   return (
-    <div>
+    <div className="main-content">
       <h1>Hello and welcome to the university portal!</h1>
 
       <div className="search-bar">
