@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
@@ -32,13 +33,14 @@ function App() {
       <div className="search-bar">
         <label htmlFor="region">Region:</label>
         <input
+          placeholder="Enter country to search...."
           type="text"
           id="region"
           value={region}
           onChange={(e) => setRegion(e.target.value)}
         />
-        <button onClick={handleSearch}>Search</button>
-        <button onClick={() => setRegion("")}>Clear</button>
+        <button style={{backgroundColor: "#b15d80", color: "black"}} onClick={handleSearch}>Search</button>
+        <button style={{backgroundColor: "#d9e1ed", color: "black"}} onClick={() => setRegion("")}>Clear</button>
       </div>
 
       {error && <p>{error}</p>}

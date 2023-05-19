@@ -1,15 +1,18 @@
+#root {
+  text-align: center;
+  background-color: #e7ecf3;
+}
 .search-bar {
   margin-bottom: 20px;
 }
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin: 0 30px;
 }
-
 .card {
-  border: 1px solid #ccc;
+  border: 0.5px solid black;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 4px 4px 7px -3px rgba(0, 0, 0, 0.72);
@@ -17,10 +20,30 @@
   -moz-box-shadow: 4px 4px 7px -3px rgba(0, 0, 0, 0.72);
   text-align: center;
 }
-
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+input {
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+button {
+  margin: 5px;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  text-align: center;
+  /* margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  font-weight: bold;
 }
