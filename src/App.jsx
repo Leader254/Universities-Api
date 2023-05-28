@@ -8,10 +8,6 @@ function App() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const handleSearch = () => {
-    setError(null);
-  };
-
   useEffect(() => {
     if (region === "") {
       return;
@@ -19,7 +15,7 @@ function App() {
 
     setLoading(true); // Set loading state to true before fetching data
 
-    fetch(`http://universities.hipolabs.com/search?country=${region}`)
+    fetch(`https://universitiesapi.onrender.com/v1/api/universities/${region}`)
       .then((response) => response.json())
       .then((data) => {
         setUniversities(data);
@@ -46,7 +42,7 @@ function App() {
         />
         <button
           style={{ backgroundColor: "#b15d80", color: "black" }}
-          onClick={handleSearch}
+          // onClick={handleSearch}
         >
           Search
         </button>
